@@ -13,6 +13,7 @@ import Navbar from './components/layout/Navbar';
 import Sidebar from './components/layout/Sidebar';
 import ProtectedRoute from './ProtectedRoute';
 import MenuIcon from '@mui/icons-material/Menu';
+import JobDescriptionGenerator from './pages/JobDescriptionGenerator';
 
 const App = () => {
     const { isAuthenticated, isLoading } = useSelector((state) => state.auth); // Assuming isLoading is part of auth state
@@ -116,6 +117,14 @@ const App = () => {
                         element={
                             <ProtectedRoute>
                                 <AdminManagement />
+                            </ProtectedRoute>
+                        }
+                    />
+                    <Route
+                        path="/chats"
+                        element={
+                            <ProtectedRoute>
+                                <JobDescriptionGenerator />
                             </ProtectedRoute>
                         }
                     />
