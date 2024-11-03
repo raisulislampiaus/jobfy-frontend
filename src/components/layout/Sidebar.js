@@ -9,6 +9,7 @@ import DashboardIcon from '@mui/icons-material/Dashboard'; // Import Dashboard i
 import WorkIcon from '@mui/icons-material/Work'; // Import Work icon
 import BusinessIcon from '@mui/icons-material/Business'; // Import Business icon
 import PeopleIcon from '@mui/icons-material/People'; // Import People icon
+import ChatIcon from '@mui/icons-material/Chat';
 
 const Sidebar = () => {
     const theme = useTheme();
@@ -45,6 +46,12 @@ const Sidebar = () => {
                         <BusinessIcon />
                     </ListItemIcon>
                     <ListItemText primary="Companies" />
+                </ListItem>
+                <ListItem button component={Link} to="/Chats"> {/* Add Link for Companies */}
+                    <ListItemIcon>
+                      <ChatIcon />
+                    </ListItemIcon>
+                    <ListItemText primary="Chat & AI" />
                 </ListItem>
                 
                 {/* Conditionally render the "Users" list item for super-admins only */}
