@@ -16,7 +16,7 @@ const JobDescriptionGenerator = () => {
     setDescription('');
 
     try {
-      const response = await axios.post('http://localhost:5000/api/jobs/generate-description', { prompt });
+      const response = await axios.post('https://jobfy-1.onrender.com/api/jobs/generate-description', { prompt });
       setDescription(response.data.description);
     } catch (error) {
       console.error('Error generating description:', error);
